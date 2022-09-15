@@ -4,7 +4,7 @@ layout tall
 launch --title "Source" vim code.cpp
 
 # second kitty window
-launch --title "Input" vim  input
+launch --title "Input" vim  inputs
 
 # third kitty window
-launch --title "Output" bash -c "ls code.cpp input | entr sh -c 'clear;printf "Output:"; g++ code.cpp -o temp;./temp<input>output;cat output'"
+launch --title "Output" bash -c "ls code.cpp inputs | entr sh -c 'clear;printf "Output:";echo;echo; g++ code.cpp -o temp;./temp<inputs>output;cat output;rm -rf temp'"
