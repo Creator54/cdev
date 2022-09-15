@@ -1,4 +1,5 @@
 layout tall
+cd /tmp/CP/
 
 # first kitty window
 launch --title "Source" vim code.cpp
