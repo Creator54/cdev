@@ -1,5 +1,3 @@
-#!/usr/bin/env fish
-
 function cdev
   if not set -q argv[1]
     set WORKDIR /tmp/CP
@@ -17,5 +15,3 @@ function cdev
     end
   end
 end
-
-cdev $argv
