@@ -8,6 +8,7 @@
   2. add cdev to $PATH for access from application launchers like rofi, dmenu.
 
 ## deps:
-  1. entr
-  2. kitty
-  3. fish
+  1. vim
+  2. entr
+  3. kitty
+  4. fish
