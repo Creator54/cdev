@@ -3,7 +3,7 @@ function cdev
     set WORKDIR /tmp/CP
     mkdir -p $WORKDIR
     touch $WORKDIR/code.cpp $WORKDIR/inputs $WORKDIR/output
-    printf '#include<bits/stdc++.h>\nusing namespace std;\n\nint main(){\n  cout<<"Hello World";\n}' > $WORKDIR/code.cpp
+    printf '#include<bits/stdc++.h>\nusing namespace std;\n\nint main(){\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  cout<<"Hello World";\n}' > $WORKDIR/code.cpp
     kitty --session (cd (dirname (status -f)); and pwd)/cp_session
     rm -rf $WORKDIR
   else

@@ -1,8 +1,8 @@
-layout tall
+layout tall:bias=70
 cd /tmp/CP/
 
 # first kitty window
-launch --title "Source" vim code.cpp
+launch --title "Source" vim "+8 normal $" code.cpp
 
 # second kitty window
 launch --title "Input" vim  inputs
