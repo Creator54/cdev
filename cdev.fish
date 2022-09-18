@@ -2,7 +2,7 @@ function cdev
   set -gx CURRENTDIR (pwd)
   set -gx WORKDIR $CURRENTDIR
   if not set -q argv[1]
-    set -gx WORKDIR /tmp/CP
+    set -gx WORKDIR /tmp
     set -gx code $WORKDIR/code.cpp
   else
     set -gx code $WORKDIR/$argv[1]
