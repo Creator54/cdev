@@ -1,11 +1,11 @@
 layout tall:bias=70
-cd /tmp/CP/
+cd $WORKDIR
 
 # first kitty window
-launch --title "Source" vim "+8 normal $" code.cpp
+launch --title "Source" sh -c "vim '+8 normal $' $code"
 
 # second kitty window
-launch --title "Input" vim  inputs
+launch --title "Input" sh -c "vim  $input"
 
 # third kitty window
-launch --title "Output" bash -c "ls code.cpp inputs | entr sh -c 'clear;printf "Output:";echo;echo; g++ code.cpp -o temp;./temp<inputs>output;cat output;rm -rf temp'"
+launch --title "Output" bash -c "ls $code inputs | entr sh -c 'clear;printf "Output:";echo;echo; g++ $code -o exe;./exe<$input>$output;cat $output; rm -rf $WORKDIR/exe'"
