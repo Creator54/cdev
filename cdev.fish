@@ -13,7 +13,9 @@ function cdev
 
   mkdir -p $WORKDIR
   touch $code $input $output
-  printf '#include<bits/stdc++.h>\nusing namespace std;\n\nint main(){\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  cout<<"Hello World";\n}' > $code
+  if [ (cat $code | wc -c) -eq 0 ] #fill only if codefile is empty/new
+    printf '#include<bits/stdc++.h>\nusing namespace std;\n\nint main(){\n  ios_base::sync_with_stdio(0);\n  cin.tie(0);\n  cout.tie(0);\n  cout<<"Hello World";\n}' > $code
+  end
   kitty --session (cd (dirname (status -f)); and pwd)/cp_session
   cd $CURRENTDIR
   set -e CURRENTDIR WORKDIR code input output
