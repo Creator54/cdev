@@ -1,3 +1,18 @@
+# TEMPLATE CODE SYNTAX: DO NOT REMOVE THE WHITESPACE IN LINE5, MODIFY TEMPLATE AS PER NEED
+# START
+# #include<bits/stdc++.h>
+# using namespace std;
+# 
+# int main(){
+#   ios_base::sync_with_stdio(0);
+#   cin.tie(0);
+#   cout.tie(0);
+#   string msg;
+#   getline(cin,msg);
+#   cout<<msg;
+# }
+# END
+
 layout tall:bias=70
 cd $WORKDIR
 
